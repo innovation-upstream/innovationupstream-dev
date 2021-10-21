@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+{{ define "main" }}
 
-<head>
-    {{- partial "head.html" . }}
-</head>
+{{- block "about.html" . }}{{- end}}
+{{- block "benefit.html" . }}{{- end}}
+{{- block "tools.html" . }}{{- end}}
+{{- block "contact.html" . }}{{- end}}
 
-<body>
-    {{ partial "home/hero/index.html" }}
-    {{ partial "home/tooling/index.html" }}
-</body>
-
-</html>
-
-
+{{ end }}

@@ -1,0 +1,24 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "styles";
+@import "about";
+@import "benefit";
+@import "tools";
+@import "contact";
+.z-top {
+    z-index: 999;
+}
+
+.primary-font {
+    font-family: 'Prompt', sans-serif;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.input-blue_border_none {
+    outline           : 0px !important;
+    -webkit-appearance: none;
+    box-shadow        : none !important;
+    border: 0px !important;
+}

@@ -1,0 +1,63 @@
+<footer class="footer d-flex flex-column justify-content-between">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 d-lg-block d-flex flex-column align-items-center footer_logo">
+                <div class="footer_logo_image">
+                    <img class="w-100" src="/logo_footer.png" alt="">
+                </div>
+                <div class="mt-4 footer_logo_text">
+                    All rights reserved {{.Content}}. Innovation upstream.
+                </div>
+            </div>
+            <div class="footer_content col-12 col-lg-7 mt-3">
+                <div class="row">
+                    <div class="mt-3 col-lg-3 col-12 d-flex flex-column d-lg-block align-items-center">
+                        <div class="row mb-3 footer_content_header">
+                            General
+                        </div>
+                        {{ range .Site.Menus.main.ByWeight }}
+                        <a href="{{ .URL }}" class="row text-black mt-2 col-auto footer_content_description">
+                            {{ .Name }}
+                        </a>
+                        {{ end }}
+
+                    </div>
+                    <div class="mt-3 col-lg-3 col-12 d-flex flex-column d-lg-block align-items-center">
+                        <div class="row mb-3 footer_content_header">
+                            Links
+                        </div>
+                        {{ range .Site.Params.social.icon }}
+
+                        <a href="mailto: innovationstream@gmail.com" class="row text-black mt-2 col-auto footer_content_description">
+                            {{ .name }}
+                        </a>
+
+                        {{ end }}
+                    </div>
+                    <div class=" mt-3 mb-3 col-lg-3 col-12 d-flex flex-column d-lg-block align-items-center">
+                        <div class="row mb-3 footer_content_header ">
+                            Get In Touch
+                        </div>
+                        <a href="mailto: innovationstream@gmail.com" class="row text-black mt-2 col-auto footer_content_description">
+                            innovationstream@gmail.com
+                        </a>
+                        <a href="tel:+10974672112" class="row text-black mt-2 col-auto footer_content_description">
+                            +1 097 467 21 12
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-dark footer__bottom_bar justify-content-center m-0">
+        <div class="col-auto footer__bottom_bar__text">
+            Privacy Policy
+        </div>
+        <div class="col-auto footer__bottom_bar__text">
+            Terms and Conditions
+        </div>
+        <div class="col-auto footer__bottom_bar__text">
+            Help
+        </div>
+    </div>
+</footer>

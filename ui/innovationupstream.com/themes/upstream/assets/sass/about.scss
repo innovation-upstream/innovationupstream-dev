@@ -1,0 +1,50 @@
+.about {
+    .about__title {
+        font-family            : 'Prompt', sans-serif;
+        font-style             : normal;
+        font-weight            : 600;
+        font-size              : 16px;
+        line-height            : 24px;
+        letter-spacing         : 0.11em;
+        text-transform         : uppercase;
+        background             : linear-gradient(89.94deg, #27E1E1 0.06%, #1F6DD6 99.95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .about__heading {
+        font-family   : 'Prompt', sans-serif;
+        font-style    : normal;
+        font-weight   : bold;
+        font-size     : 38px;
+        line-height   : 56px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color         : #0A1A2F;
+    }
+
+    .about__description {
+        font-family: 'Prompt', sans-serif;
+        font-style : normal;
+        font-weight: normal;
+        font-size  : 16px;
+        line-height: 28px;
+        color      : #6D7F98;
+    }
+
+    .about__oval {
+        bottom : 0;
+        right  : 0;
+        z-index: 0;
+    }
+
+    .about__image {
+        z-index: 1;
+    }
+}
+
+@media (max-width: 990px) {
+    .about__image {
+        width: 100%;
+    }
+}
