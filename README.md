@@ -2,6 +2,7 @@
 
 ### Pre reqs
 
+- Direnv
 - Nix `nix-shell`
 
 ### Dev Setup
