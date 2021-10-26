@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    <div class="home">
+        <div class="home-size home-background position-relative">
+            {{- partial "header.html" . -}}
+            <div class="position-absolute top-0 end-0">
+                <img src="/Logod.png" alt="">
+            </div>
+            <div class="home-overlay-size home-overlay-position home-overlay-blur">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <main>
+            {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
+    </div>
+   
+
+</body>
+
+</html>
