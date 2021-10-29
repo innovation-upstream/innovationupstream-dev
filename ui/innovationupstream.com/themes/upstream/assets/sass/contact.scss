@@ -39,7 +39,7 @@
         border-radius  : 48px !important;
         display        : flex;
         justify-content: center;
-
+        background-repeat: no-repeat;
     }
 
     .contact__background__text-background {
@@ -48,6 +48,5 @@
 
     .contact__background__text__textbox {
         border-radius: 48px;
-        border       : 1px solid white;
     }
 }
