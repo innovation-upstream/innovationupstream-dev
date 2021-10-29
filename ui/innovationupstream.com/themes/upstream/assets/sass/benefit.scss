@@ -1,51 +1,72 @@
 .benefits {
     padding-top: 12rem;
+    height: 32.6rem;
+}
 
-    .benefits-title {
-        font-family   : 'Prompt', sans-serif;
-        font-style    : normal;
-        font-weight   : bold;
-        font-size     : 38px;
-        line-height   : 133.2%;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        color         : #0A1A2F;
-    }
+.benefits-title {
+    font-family   : 'Prompt', sans-serif;
+    font-style    : normal;
+    font-weight   : bold;
+    font-size     : 38px;
+    line-height   : 133.2%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color         : #0A1A2F;
+}
 
-    .benefits-description {
-        font-family: 'Prompt', sans-serif;
-        font-style : normal;
-        font-weight: normal;
-        font-size  : 16px;
-        line-height: 27px;
-    }
+.benefits-description {
+    font-family: 'Prompt', sans-serif;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 27px;
+}
 
-    .benefits-feature-first {
-        background   : #0A1A2F;
-        border-radius: 10px;
-        height       : 330px;
-        width        : 237px;
-    }
+.benefits-feature-header {
+    font-family            : 'Prompt', sans-serif;
+    font-style             : normal;
+    font-weight            : bold;
+    font-size              : 24px;
+    line-height            : 133.2%;
+    letter-spacing         : 0.02em;
+    text-transform         : uppercase;
+    background             : linear-gradient(89.94deg, #27E1E1 0.06%, #1F6DD6 99.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .benefits-feature-other {
-        width        : 237px;
-        height       : 330px;
-        background   : #FFFFFF;
-        border       : 1px solid #EFF4FB;
-        box-sizing   : border-box;
-        border-radius: 10px;
-    }
+.benefits-feature-first {
+    background   : #0A1A2F;
+    border-radius: 10px;
+    height       : 330px;
+    width        : 237px;
+}
 
-    .benefits-feature-header {
-        font-family            : 'Prompt', sans-serif;
-        font-style             : normal;
-        font-weight            : bold;
-        font-size              : 24px;
-        line-height            : 133.2%;
-        letter-spacing         : 0.02em;
-        text-transform         : uppercase;
-        background             : linear-gradient(89.94deg, #27E1E1 0.06%, #1F6DD6 99.95%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.benefits-feature-other {
+    width        : 237px;
+    height       : 330px;
+    background   : #FFFFFF;
+    border       : 1px solid #EFF4FB;
+    box-sizing   : border-box;
+    border-radius: 10px;
+}
+
+.benefits-feature-first-position {
+    position: absolute;
+    right   : 43rem;
+}
+
+.benefits-feature-header-position {
+    position: absolute;
+    right   : 59rem;
+}
+
+.benefits-feature-third-position {
+    position: absolute;
+    right   : 3rem;
+}
+
+.benefits-feature-second-position {
+    position: absolute;
+    right   : 24rem;
 }
