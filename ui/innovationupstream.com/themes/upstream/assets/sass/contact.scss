@@ -1,25 +1,7 @@
 .contact {
-    margin-top: 7rem;
 
     .contact__background {
-        height: 418px;
-    }
-
-    .contact__background__text {
-        position : absolute;
-        top      : 50%;
-        left     : 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .contact__background__text__header {
-        font-family: 'Prompt', sans-serif;
-        font-style : normal;
-        font-weight: bold;
-        font-size  : 32px;
-        line-height: 48px;
-        text-align : center;
-        color      : #FFFFFF;
+        min-height: 418px;
     }
 
     .contact__background__text__description {
@@ -33,12 +15,12 @@
     }
 
     .contact__background__text__button {
-        width          : 143px;
-        height         : 48px;
-        background     : linear-gradient(89.94deg, #27E1E1 0.06%, #1F6DD6 99.95%);
-        border-radius  : 48px !important;
-        display        : flex;
-        justify-content: center;
+        width            : 143px;
+        height           : 48px;
+        background       : linear-gradient(89.94deg, #27E1E1 0.06%, #1F6DD6 99.95%);
+        border-radius    : 48px !important;
+        display          : flex;
+        justify-content  : center;
         background-repeat: no-repeat;
     }
 
@@ -48,5 +30,69 @@
 
     .contact__background__text__textbox {
         border-radius: 48px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .contact__background__text__header {
+        font-family: 'Prompt', sans-serif;
+        font-style : normal;
+        font-weight: bold;
+        font-size  : 32px;
+        line-height: 48px;
+        text-align : center;
+        color      : #000000;
+    }
+    .contact__background__image{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 280px) {
+    .contact__background__text {
+        position : absolute;
+        width: 100%;
+    }
+    .contact__background__text__header {
+        font-family: 'Prompt', sans-serif;
+        font-style : normal;
+        font-weight: bold;
+        font-size  : 32px;
+        line-height: 48px;
+        text-align : center;
+        color      : #000000;
+    }
+    .contact__background__image{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .contact__background__text {
+        position : absolute;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .contact__background__text {
+        width: auto;
+        position : absolute;
+        top      : 50%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+    }
+    .contact__background__text__header {
+        font-family: 'Prompt', sans-serif;
+        font-style : normal;
+        font-weight: bold;
+        font-size  : 32px;
+        line-height: 48px;
+        text-align : center;
+        color      : #FFFFFF;
+    }
+    .contact__background__image{
+        display: block;
     }
 }

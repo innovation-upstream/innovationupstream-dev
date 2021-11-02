@@ -12,7 +12,8 @@
 }
 
 .width-fit-content {
-    width: fit-content;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
 }
 
 .input-blue_border_none {
@@ -20,4 +21,10 @@
     -webkit-appearance: none;
     box-shadow        : none !important;
     border: 0px !important;
+}
+
+@media only screen and (max-width: 240px) {
+    body{
+        display: none;
+    }
 }

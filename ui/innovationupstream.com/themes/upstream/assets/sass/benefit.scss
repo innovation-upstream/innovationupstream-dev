@@ -1,6 +1,6 @@
 .benefits {
     padding-top: 12rem;
-    height: 32.6rem;
+    min-height: 32.6rem;
 }
 
 .benefits-title {
@@ -44,29 +44,105 @@
 
 .benefits-feature-other {
     width        : 237px;
-    height       : 330px;
+    min-height       : 330px;
     background   : #FFFFFF;
     border       : 1px solid #EFF4FB;
     box-sizing   : border-box;
     border-radius: 10px;
 }
 
-.benefits-feature-first-position {
-    position: absolute;
-    right   : 43rem;
+
+
+@media only screen and (max-width: 280px) {
+    .benefits-feature-header-position {
+        position: relative;
+        
+    }
+    .benefits-feature-first-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    
+    
+    .benefits-feature-third-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    
+    .benefits-feature-second-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    .benefits__feature{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.benefits-feature-header-position {
-    position: absolute;
-    right   : 59rem;
+@media only screen and (min-width: 280px) {
+    .benefits__feature{
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefits-feature-first-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    
+    
+    .benefits-feature-third-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    
+    .benefits-feature-second-position {
+        position: relative;
+        margin-top: 3rem;
+    }
+    .benefits__feature{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.benefits-feature-third-position {
-    position: absolute;
-    right   : 3rem;
+@media only screen and (min-width: 600px) {
+    .benefits__feature{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-.benefits-feature-second-position {
-    position: absolute;
-    right   : 24rem;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .benefits__feature{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .benefits__feature{
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefits-feature-header-position {
+        position: absolute;
+        right   : 59rem;
+    }
+    .benefits-feature-first-position {
+        position: absolute;
+        right   : 43rem;
+    }
+    
+    .benefits-feature-third-position {
+        position: absolute;
+        right   : 3rem;
+    }
+    
+    .benefits-feature-second-position {
+        position: absolute;
+        right   : 24rem;
+    }
 }
