@@ -250,7 +250,7 @@
 }
 
 .stats-wrap {
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     div {
         flex-basis: 30%;
@@ -290,7 +290,7 @@
     }
 
     .home-overlay-heading {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .home-overlay-subheading {
@@ -335,7 +335,8 @@
             align-items: center;
         }
         .home-overlay-heading {
-            font-size: 3rem;
+            font-size: 2rem;
+            line-height: 2.5rem !important;
         }
     
         .home-overlay-subheading {

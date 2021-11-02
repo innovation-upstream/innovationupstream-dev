@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html amp>
 {{- partial "head.html" . -}}
 
 <body>
@@ -7,7 +7,7 @@
         <div class="home-size home-background position-relative pb-5">
             {{- partial "header.html" . -}}
             <div class="position-absolute top-0 end-0">
-                <img src="/Logod.png" alt="">
+                <amp-img src="/Logod.png" alt="" width="829" height="898">
             </div>
             <div class="home-overlay-size home-overlay-position home-overlay-blur">
             </div>
@@ -19,8 +19,6 @@
         </main>
          {{- partial "footer.html" . -}} 
     </div>
-   
-
 </body>
 
 </html>
