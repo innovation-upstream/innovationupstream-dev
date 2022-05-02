@@ -1,0 +1,62 @@
+<section
+  class="intro-section bg-cover bg-center bg-no-repeat w-full bg-first-section-pattern relative z-10 px-4 pt-28 lg:pt-40 pb-6 md:pb-12">
+
+  <!-- Lines -->
+  <div class="line absolute top-0 left-[12.5%] w-[1px] h-full opacity-5 bg-white"></div>
+  <div class="line hidden sm:block absolute top-0 left-[25%] w-[1px] h-full opacity-5 bg-white -[-1] "></div>
+  <div class="line absolute top-0 left-[37.5%] w-[1px] h-full opacity-5 bg-white"></div>
+  <div class="line hidden sm:block absolute top-0 left-[50%] w-[1px] h-full opacity-5 bg-white -[-1] "></div>
+  <div class="line absolute top-0 left-[62.5%] w-[1px] h-full opacity-5 bg-white"></div>
+  <div class="line hidden sm:block absolute top-0 left-[75%] w-[1px] h-full opacity-5 bg-white -[-1] "></div>
+  <div class="line absolute top-0 left-[87.5%] w-[1px] h-full opacity-5 bg-white"></div>
+
+  <div class="intro-container sm:flex w-full xl:max-w-[1172px] mx-auto relative">
+
+    <!-- Highlights -->
+
+    <!-- Center small -->
+    <div
+      class="highlight hidden sm:block before:bg-small-highlight-dull before:blur rounded-full before:w-4 before:h-4 before:absolute before:left-[24%] before:top-[-5%]">
+    </div>
+    <!-- Bottom small -->
+    <div
+      class="highlight hidden md:block before:bg-small-highlight-dull before:blur rounded-full before:w-5 before:h-5 before:absolute before:right-[27%] before:bottom-[-8%]">
+    </div>
+    <!-- Top center big -->
+    <div
+      class="highlight before:bg-bigger-highlight before:blur-[113px] before:w-[33rem] before:h-[13rem] before:rounded-full before:absolute before:rotate-[46deg] before:top-[-3%] before:right-[20%] z-[-1]">
+    </div>
+
+    <!-- Content -->
+
+    <div class="intro-content-wrap text-white relative z-10">
+      <div class="intro-content w-10/12 sm:w-7/12 mx-auto mb-4 sm:mb-0">
+        <h1
+          class="text-2xl md:text-3xl lg:text-h1 md:leading-snug lg:leading-snug text-center text-white font-bold mb-3 uppercase">
+          {{ .ctx.title }}
+        </h1>
+        <p class="text-base text-white text-center lg:text-left font-light">
+          {{ .ctx.subtitle }}
+        </p>
+      </div>
+      <div class="img-container flex items-center justify-center">
+        <img src="https://res.cloudinary.com/innovation-upstream/image/upload/f_auto,q_80/v1650022616/InUp/mission-1_eqbz05.png" alt="" class="block w-[45%] sm:w-[35%] relative top-10 md:top-20 lg:top-28 pr-2 sm:pr-0">
+
+        <img src="https://res.cloudinary.com/innovation-upstream/image/upload/f_auto,q_80/v1650022612/InUp/mission-2_tkobgw.png" alt="" class="hidden sm:block w-[30%] px-4 lg:px-8 pt-4 md:pt-10 lg:pt-20">
+
+        <img src="https://res.cloudinary.com/innovation-upstream/image/upload/f_auto,q_80/v1650022611/InUp/mission-3_i1ag0v.png" alt="" class="block w-[45%] sm:w-[35%] pl-2 sm:pl-0">
+      </div>
+    </div>
+
+    <button
+    class="chat-btn grid place-items-center w-[56px] h-[56px] rounded-full bg-light-blue absolute right-0 lg:right-9 bottom-[-4.25rem] lg:bottom-0 z-20 text-white">
+    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M5.49143 16.088L2.47143 17.1039L2.47 17.1024L3.50286 14.5001L3.01 13.8517C1.98571 12.5015 1.42857 10.9223 1.42857 9.36606C1.42857 5.196 5.27143 1.44093 10 1.44093C14.7286 1.44093 18.5714 5.196 18.5714 9.36606C18.5714 13.5361 14.7286 17.2912 10 17.2912C8.58429 17.2912 7.23429 16.9655 6.02 16.3546L5.49143 16.088ZM1.06093 18.9784C1.19318 19.0118 1.33215 19.0064 1.46143 18.9627V18.9612L5.38143 17.6428C6.81586 18.3637 8.39739 18.7367 10 18.7321C15.7143 18.7321 20 14.1413 20 9.36606C20 4.59081 15.7143 0 10 0C4.28571 0 0 4.59081 0 9.36606C0 11.2767 0.685714 13.1557 1.87429 14.7263L0.571429 18.0117C0.520737 18.1393 0.507327 18.2789 0.532782 18.414C0.558237 18.5491 0.621495 18.6741 0.715082 18.7741C0.808669 18.8741 0.928676 18.945 1.06093 18.9784ZM9.56275 10.4309C9.70141 10.4888 9.85002 10.5186 10.0001 10.5186C10.3032 10.5186 10.5939 10.3972 10.8082 10.181C11.0226 9.96482 11.143 9.67162 11.143 9.36589C11.143 9.06016 11.0226 8.76696 10.8082 8.55078C10.5939 8.33459 10.3032 8.21314 10.0001 8.21314C9.85002 8.21314 9.70141 8.24296 9.56275 8.30089C9.4241 8.35882 9.29811 8.44373 9.19198 8.55078C9.08586 8.65782 9.00168 8.7849 8.94424 8.92475C8.88681 9.06461 8.85725 9.21451 8.85725 9.36589C8.85725 9.51727 8.88681 9.66717 8.94424 9.80703C9.00168 9.94689 9.08586 10.074 9.19198 10.181C9.29811 10.288 9.4241 10.373 9.56275 10.4309ZM13.8485 10.4309C13.9871 10.4888 14.1357 10.5186 14.2858 10.5186C14.5889 10.5186 14.8796 10.3972 15.0939 10.181C15.3083 9.96482 15.4287 9.67162 15.4287 9.36589C15.4287 9.06016 15.3083 8.76696 15.0939 8.55078C14.8796 8.33459 14.5889 8.21314 14.2858 8.21314C14.1357 8.21314 13.9871 8.24296 13.8485 8.30089C13.7098 8.35882 13.5838 8.44373 13.4777 8.55078C13.3716 8.65782 13.2874 8.7849 13.23 8.92475C13.1725 9.06461 13.143 9.21451 13.143 9.36589C13.143 9.51727 13.1725 9.66717 13.23 9.80703C13.2874 9.94689 13.3716 10.074 13.4777 10.181C13.5838 10.288 13.7098 10.373 13.8485 10.4309ZM5.27704 10.4309C5.4157 10.4888 5.56431 10.5186 5.71439 10.5186C6.0175 10.5186 6.30819 10.3972 6.52251 10.181C6.73684 9.96482 6.85725 9.67162 6.85725 9.36589C6.85725 9.06016 6.73684 8.76696 6.52251 8.55078C6.30819 8.33459 6.0175 8.21314 5.71439 8.21314C5.56431 8.21314 5.4157 8.24296 5.27704 8.30089C5.13838 8.35882 5.01239 8.44373 4.90627 8.55078C4.80014 8.65782 4.71596 8.7849 4.65853 8.92475C4.60109 9.06461 4.57153 9.21451 4.57153 9.36589C4.57153 9.51727 4.60109 9.66717 4.65853 9.80703C4.71596 9.94689 4.80014 10.074 4.90627 10.181C5.01239 10.288 5.13838 10.373 5.27704 10.4309Z"
+        fill="white" />
+    </svg>
+
+  </button>
+  </div>
+  
+</section>

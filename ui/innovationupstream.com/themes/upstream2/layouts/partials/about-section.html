@@ -1,0 +1,59 @@
+<section class="about-section pt-10 pb-8 md:py-24 lg:py-56 relative">
+  <div class="about-bg hidden xl:flex absolute z-1 top-0 left-[-31px] w-full h-full bg-about-section bg-no-repeat bg-center bg-contain"></div>
+  <div class="container relative z-2 w-full max-w-[1172px] px-4 mx-auto">
+    <div class="about-us mb-14 lg:flex ">
+      <div class="about-us-img lg:relative left-[-30px] xl:left-[-170px]">
+        <img
+          src="https://res.cloudinary.com/innovation-upstream/f_auto,q_80/InUp/about-section_opus1y.png"
+          alt=""
+          class="xl:max-w-none xl:w-[117%]"
+        />
+      </div>
+      <div class="about-us-descr lg:w-[530px] xl:relative xl:left-[-54px]">
+        <h3
+          class="bg-clip-text bg-text-gradient text-transparent uppercase font-semibold pt-4 lg:pt-[97px] mb-4"
+        >
+          {{ .ctx.subtitle }}
+        </h3>
+        <h2 class="uppercase font-bold text-2xl lg:text-4xl text-black mb-4">
+          {{ .ctx.title }}
+        </h2>
+        <div class="leading-7 text-gray">
+          <p class="mb-6">
+            {{ .ctx.description1 }}
+          </p>
+          <p>
+            {{ .ctx.description2 }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="benefits lg:flex xl:pt-20">
+      <div class="md:max-w-[281px] flex-none mb-8 md:mr-20">
+        <h2 class="uppercase font-bold text-2xl lg:text-4xl mb-4 text-black bg-white">
+          {{ .ctx.benefits.title }} <br class="hidden md:flex"/>
+          {{ .ctx.benefits.subtitle }}
+        </h2>
+        <p class="leading-7 text-gray">
+          {{ .ctx.benefits.description }}
+        </p>
+      </div>
+      <div class="benefits-items text-gray transition-all md:flex">
+        
+        {{range .ctx.features }}
+        <div class="benefits-item w-full md:w-2/6 border border-solid border-[#EFF4FB] px-4 py-6 lg:py-12 lg:pl-6 lg:pr-7 mb-4 md:mb-0 rounded-md bg-black md:bg-white hover:bg-black cursor-pointer hover:text-white transition-all mx-2">
+          <h3
+            class="uppercase bg-clip-text bg-text-gradient text-transparent font-bold text-1xl md:text-2xl mb-4 md:mb-12"
+          >
+            {{.title }}<br />{{ .subtitle }}
+          </h3>
+          <p class="text-sm">
+            {{ .description }}
+          </p>
+        </div>
+        {{end }}
+
+      </div>
+    </div>
+  </div>
+</section>

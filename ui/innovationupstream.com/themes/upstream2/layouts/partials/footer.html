@@ -1,0 +1,67 @@
+<footer class="footer">
+  <div class="footer-top pb-8 lg:pb-40 container mx-auto">
+    <div class="container w-full max-w-[1172px] px-4 mx-auto md:flex items-start justify-between">
+      <div class="footer-logo">
+        <a href="/" class="logo block mb-4 md:mb-8">
+          <img src="{{ .ctx.Site.Params.brand.logoFooter }}" loading='lazy' alt="Logo">
+        </a>
+        <span class="text-xs font-light" style="color: #6D7F98;">{{ .ctx.Site.Params.brand.copyright }}</span>
+      </div>
+      
+      <div class="menu mt-8 md:mt-0 md:ml-auto mr-10">
+        {{ range  .ctx.Site.Menus.footer }}          
+        
+        <h3 class="text-lg uppercase font-semibold mb-1 md:mb-4"> {{ .Name }}</h3>
+        {{ if .HasChildren }}
+        <ul class="grid grid-cols-2 grid-flow-column-dense gap-x-20">
+          {{ range .Children}}
+          <li class="mb-3">
+            <a class="text-sm font-light" style="color: #0A1A2F;" href="{{ .URL }}"> {{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+
+
+      <div class="menu mt-8 md:mt-0 md:ml-10 lg:ml-24">
+        <h3 class="text-lg uppercase font-semibold mb-1 md:mb-4">{{ .ctx.Site.Params.footerContacts.title}}</h3>
+        <ul class="">
+          <li class="mb-3">
+            <a class="text-sm font-light" style="color: #0A1A2F;" href="#">{{ .ctx.Site.Params.footerContacts.mail}}</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-sm font-light" style="color: #0A1A2F;" href="#">{{ .ctx.Site.Params.footerContacts.phone}}</a>
+          </li>
+          <li class="flex justify-start gap-7 items-center ">
+              <a href="{{ .ctx.Site.Params.footerContacts.twitterURL}}" class="hover:opacity-80" target="_blank">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                  <path d="M23.6425 2.93757C22.8075 3.30757 21.9105 3.55757 20.9675 3.67057C21.9405 3.08836 22.6685 2.17203 23.0155 1.09257C22.1014 1.63555 21.1009 2.01776 20.0575 2.22257C19.3559 1.47343 18.4266 0.976891 17.4138 0.810039C16.4011 0.643187 15.3616 0.815357 14.4568 1.29982C13.5519 1.78428 12.8323 2.55393 12.4097 3.48927C11.9871 4.42461 11.8851 5.47332 12.1195 6.47257C10.2672 6.37956 8.45515 5.89811 6.80095 5.05947C5.14674 4.22083 3.68736 3.04373 2.51752 1.60457C2.11752 2.29457 1.88752 3.09457 1.88752 3.94657C1.88708 4.71356 2.07596 5.46881 2.4374 6.1453C2.79885 6.82179 3.32168 7.3986 3.95952 7.82457C3.2198 7.80103 2.4964 7.60115 1.84952 7.24157V7.30156C1.84945 8.37731 2.22156 9.41994 2.90271 10.2526C3.58386 11.0852 4.53209 11.6565 5.58652 11.8696C4.90031 12.0553 4.18086 12.0826 3.48252 11.9496C3.78002 12.8752 4.35952 13.6846 5.13989 14.2645C5.92026 14.8444 6.86244 15.1657 7.83452 15.1836C6.18436 16.479 4.14641 17.1817 2.04852 17.1786C1.6769 17.1787 1.3056 17.157 0.936523 17.1136C3.066 18.4827 5.54486 19.2094 8.07652 19.2066C16.6465 19.2066 21.3315 12.1086 21.3315 5.95257C21.3315 5.75257 21.3265 5.55056 21.3175 5.35056C22.2288 4.69154 23.0154 3.87546 23.6405 2.94057L23.6425 2.93757Z" fill="#27AAE1"/>
+                </svg>
+              </a>
+              <a href="{{ .ctx.Site.Params.footerContacts.instagramURL}}" class="hover:opacity-80" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                  <path d="M10.0001 6.87726C8.2798 6.87726 6.87589 8.28117 6.87589 10.0015C6.87589 11.7218 8.2798 13.1257 10.0001 13.1257C11.7204 13.1257 13.1243 11.7218 13.1243 10.0015C13.1243 8.28117 11.7204 6.87726 10.0001 6.87726ZM19.3704 10.0015C19.3704 8.70773 19.3821 7.4257 19.3095 6.13429C19.2368 4.63429 18.8946 3.30304 17.7978 2.20617C16.6986 1.10695 15.3696 0.767103 13.8696 0.694447C12.5759 0.621791 11.2939 0.63351 10.0025 0.63351C8.7087 0.63351 7.42667 0.621791 6.13527 0.694447C4.63527 0.767103 3.30402 1.10929 2.20714 2.20617C1.10792 3.30538 0.76808 4.63429 0.695424 6.13429C0.622767 7.42804 0.634486 8.71007 0.634486 10.0015C0.634486 11.2929 0.622767 12.5773 0.695424 13.8687C0.76808 15.3687 1.11027 16.6999 2.20714 17.7968C3.30636 18.896 4.63527 19.2359 6.13527 19.3085C7.42902 19.3812 8.71105 19.3694 10.0025 19.3694C11.2962 19.3694 12.5782 19.3812 13.8696 19.3085C15.3696 19.2359 16.7009 18.8937 17.7978 17.7968C18.897 16.6976 19.2368 15.3687 19.3095 13.8687C19.3845 12.5773 19.3704 11.2952 19.3704 10.0015ZM10.0001 14.8085C7.33996 14.8085 5.19308 12.6616 5.19308 10.0015C5.19308 7.34132 7.33996 5.19445 10.0001 5.19445C12.6603 5.19445 14.8071 7.34132 14.8071 10.0015C14.8071 12.6616 12.6603 14.8085 10.0001 14.8085ZM15.004 6.12023C14.3829 6.12023 13.8814 5.61867 13.8814 4.99757C13.8814 4.37648 14.3829 3.87492 15.004 3.87492C15.6251 3.87492 16.1267 4.37648 16.1267 4.99757C16.1269 5.14505 16.0979 5.29112 16.0416 5.42741C15.9852 5.5637 15.9026 5.68754 15.7983 5.79182C15.694 5.89611 15.5702 5.9788 15.4339 6.03515C15.2976 6.0915 15.1515 6.12041 15.004 6.12023Z" fill="#27AAE1"/>
+                </svg>                  
+              </a>
+              <a href="{{ .ctx.Site.Params.footerContacts.facebookURL}}" class="hover:opacity-80" target="_blank">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.0614C0 16.5303 3.97192 21.0778 9.16667 22V14.0553H6.41667V11H9.16667V8.55525C9.16667 5.80525 10.9386 4.27808 13.4447 4.27808C14.2386 4.27808 15.0948 4.4 15.8886 4.52192V7.33333H14.4833C13.1386 7.33333 12.8333 8.00525 12.8333 8.86142V11H15.7667L15.2781 14.0553H12.8333V22C18.0281 21.0778 22 16.5312 22 11.0614C22 4.9775 17.05 0 11 0C4.95 0 0 4.9775 0 11.0614Z" fill="#27AAE1"/>
+                </svg>                  
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom py-3" style="background-color: #0A1A2F;">
+    <div class="container w-full max-w-6xl px-4 mx-auto flex flex-col md:flex-row items-center justify-center">
+
+      {{ range  .ctx.Site.Menus.docs }} 
+      <a class="text-xs font-light mx-7 mb-1 md:mb-0" style="color: #6D7F98;" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+
+    </div>
+  </div>
+</footer>

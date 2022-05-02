@@ -1,0 +1,18 @@
+<section class="contact-section pt-8 pb-10 lg:pt-28 lg:pb-36">
+  <div class="container w-full max-w-[1172px] lg:px-4 mx-auto">
+    <div class="get-touch pt-[140px] pb-[64px] px-4 bg-no-repeat bg-center bg-contacts">
+      <h2 class="text-center text-white mb-6 bold text-2xl font-bold">
+        {{ .ctx.title }}
+      </h2>
+      <p class="text-center leading-7 text-gray max-w-[708px] mx-auto mb-12">
+        {{ .ctx.subtitle  }}
+      </p>
+      <form action="#">
+        <div class="input-wrapper max-w-[452px] mx-auto py-1 pr-1 pl-4 md:pl-6 flex flex-row justify-between items-center border-white border-[0.5px] rounded-[56px]">
+          <input type="text" placeholder="{{ .ctx.placeholder }}" class="bg-transparent text-white outline-none">
+          <button class="bg-button-gradient text-white text-base inline-flex rounded-5xl py-3 px-3 md:px-9 rounded-[24px]">{{ .ctx.button}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

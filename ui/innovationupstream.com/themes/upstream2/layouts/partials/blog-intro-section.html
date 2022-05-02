@@ -1,0 +1,25 @@
+<section class="intro-section flex items-center lg:items-start relative pt-20 pb-20 lg:pt-64 lg:pb-22 min-h-screen xl:min-h-[900px] lg:h-screen bg-cover bg-center bg-no-repeat bg-first-section-pattern">
+  <div
+    class="bg-first-section bg-cover lg:bg-contain bg-center bg-no-repeat absolute z-1 top-0 left-0 xl:left-[255px] w-full h-full"
+  ></div>
+  <div
+    class="glass-bg bg-left absolute left-0 top-0 w-full lg:w-[52%] h-full z-4 bg-glass-bg backdrop-blur-xl"
+  ></div>
+
+  <div class="container w-full lg:h-full max-w-[1172px] px-4 mx-auto">
+    <div class="intro-wrap w-full lg:h-full flex flex-col items-center max-w-lg relative z-2 mx-auto lg:m-0 lg:items-start">
+      <h1 class="text-3xl md:text-4xl lg:text-h1 md:leading-snug lg:leading-snug lg:text-left text-center text-white font-bold mb-3 uppercase">
+         {{ .ctx.title }}
+      </h1>
+      <p class="text-base text-white text-center lg:text-left font-light mb-14">
+        {{ .ctx.subtitle }}
+      </p>
+      <a
+        href="#"
+        class="base-button bg-button-gradient text-white text-base inline-flex rounded-5xl py-3 px-8 rounded-[24px] items-center"
+      >
+        <span class="inline-block"> {{ .ctx.button }}</span>
+      </a>
+    </div>
+  </div>
+</section>

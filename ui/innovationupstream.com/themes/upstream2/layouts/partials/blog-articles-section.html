@@ -1,0 +1,184 @@
+<section class="tools-section bg-with-vertical-lines bg-black bg-size-12.5% bg-repeat-x bg-center relative py-10 lg:py-[100px] h-auto"
+    x-data="{treeView:true}"
+>
+  <div class="tools-bg absolute z-1 top-0 w-full h-full bg-articles-tree-branches bg-no-repeat bg-top" x-show="treeView"></div>
+
+  
+    <!-- Highlights -->
+    <!-- Top right small-->
+    <div
+      class="highlight hidden md:block before:bg-small-highlight-dull before:blur before:w-7 before:h-7 before:absolute before:right-16 before:top-2 lg:before:top-8">
+    </div>
+
+    <!-- Center small -->
+    <div
+      class="highlight hidden sm:block before:bg-small-highlight-dull before:blur before:w-5 before:h-5 before:absolute before:right-[53%] before:top-[65%]">
+    </div>
+    <!-- Center bigger small -->
+    <div
+      class="highlight hidden lg:block before:bg-small-highlight before:blur-lg before:w-16 before:h-16 before:rounded-full before:absolute before:rotate-[36deg] before:top-[60%] before:right-40">
+    </div>
+    <!-- center big -->
+    <div
+      class="highlight before:bg-bigger-highlight before:blur-[113px] before:w-[33rem] before:h-[13rem] before:rounded-full before:absolute before:rotate-[46deg] before:top-1/2 before:right-[20%] z-[-1]">
+    </div>
+        <!-- bottom left small -->
+        <div
+        class="highlight hidden sm:block before:bg-small-highlight-dull before:blur before:w-5 before:h-5 before:absolute before:left-[10%] before:botton-[10%]">
+      </div>
+
+
+
+
+  <div class="container relative z-2 w-full max-w-[1172px] px-4 mx-auto">
+    <div class="max-w-[300px] text-gray mb-7">
+
+      <h2 class="uppercase font-bold text-2xl lg:text-4xl mb-3 text-white">
+        {{ .ctx.Site.Params.blogArticles.title }}
+      </h2>
+
+
+
+  </div>
+       {{/*  filters   */}}
+      
+       <div class="flex justify-between w-full items-center">
+        <ul class="flex gap-3 md:gap-10">
+          {{ range .ctx.Site.Params.blogArticles.filters}}
+  
+          <li><button class="text-gray md:whitespace-nowrap p-2 relative hover:text-white active:text-white text-sm sm:text-base
+                after:absolute after:left-0  after:bg-transparent after:right-0 hover:after:bg-hover-card-heading after:top-9 after:h-0.5
+            ">{{ .name }}</button></li>
+  
+          {{ end }}
+        </ul>
+  
+        <div class="bg-blue hidden md:flex rounded-lg bg-opacity-20 py-2 px-5 items-center justify-between gap-5 mr-16">
+          <button x-on:click="treeView = true">
+          <div :class="treeView? 'text-[#27AAE1]' : 'text-[#3D5370]'" class='hover:text-[#27AAE1]'>          
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.3069 17.7427H23.5643V14.0001C23.5643 13.8162 23.4913 13.64 23.3613 13.51C23.2314 13.3801 23.0551 13.307 22.8712 13.307H14.6931V10.2575H18.4357C18.6196 10.2575 18.7958 10.1845 18.9258 10.0545C19.0557 9.92459 19.1287 9.74835 19.1287 9.56444V0.693075C19.1287 0.509166 19.0557 0.332923 18.9258 0.20297C18.7958 0.0730175 18.6196 0 18.4357 0H9.56428C9.38037 0 9.20413 0.0730175 9.07418 0.20297C8.94423 0.332923 8.87121 0.509159 8.87121 0.693075V9.56444C8.87121 9.74835 8.94423 9.92459 9.07418 10.0545C9.20413 10.1845 9.38037 10.2575 9.56428 10.2575H13.3069V13.307H5.12873C4.94482 13.307 4.76858 13.3801 4.63862 13.51C4.50867 13.64 4.43565 13.8162 4.43565 14.0001V17.7427H0.693076C0.509166 17.7427 0.332923 17.8157 0.20297 17.9457C0.0730173 18.0756 0 18.2519 0 18.4358V27.3071C0 27.491 0.0730173 27.6673 0.20297 27.7972C0.332923 27.9272 0.50916 28.0002 0.693076 28.0002H9.56444C9.74835 28.0002 9.9246 27.9272 10.0545 27.7972C10.1845 27.6673 10.2575 27.4911 10.2575 27.3071V18.4358C10.2575 18.2519 10.1845 18.0756 10.0545 17.9457C9.9246 17.8157 9.74836 17.7427 9.56444 17.7427H5.82187V14.6932H22.1781V17.7427H18.4356C18.2516 17.7427 18.0754 17.8157 17.9455 17.9457C17.8155 18.0756 17.7425 18.2519 17.7425 18.4358V27.3071C17.7425 27.491 17.8155 27.6673 17.9455 27.7972C18.0754 27.9272 18.2516 28.0002 18.4356 28.0002H27.3069C27.4908 28.0002 27.6671 27.9272 27.797 27.7972C27.927 27.6673 28 27.4911 28 27.3071V18.4358C28 18.2519 27.927 18.0756 27.797 17.9457C27.6671 17.8157 27.4908 17.7427 27.3069 17.7427H27.3069ZM8.87089 19.1288V26.6137H1.38599V19.1288H8.87089ZM10.257 8.87101V1.38612H17.7419V8.87101H10.257ZM26.6133 26.6137H19.1284V19.1288H26.6133V26.6137Z" fill="currentColor"/>
+              </svg>
+                 
+            </div>
+          </button>
+    
+    
+            <div >
+              <svg width="1" height="40" viewBox="0 0 1 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500002 40C0.223859 40 1.73867e-06 39.7761 1.7266e-06 39.5L2.18557e-08 0.5C9.78513e-09 0.223858 0.223858 3.39263e-08 0.5 2.18557e-08C0.776142 9.78513e-09 1 0.223857 1 0.5L1 39.5C1 39.7761 0.776144 40 0.500002 40Z" fill="#3D5370"/>
+                </svg>
+                
+            </div>  
+    
+            <button x-on:click="treeView = false">
+            <div :class="treeView? 'text-[#3D5370]' : 'text-[#27AAE1]'" class='hover:text-[#27AAE1]'>
+              
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.0526 0H2.94742C2.16565 0 1.41605 0.310704 0.86322 0.863224C0.310696 1.41601 0 2.16566 0 2.94743V10.0935C0 10.8753 0.310703 11.6249 0.86322 12.1777C1.416 12.7305 2.16565 13.0409 2.94742 13.0409H25.0526C25.8344 13.0409 26.584 12.7305 27.1368 12.1777C27.6893 11.6249 28 10.8753 28 10.0935V2.94743C28 2.16566 27.6893 1.41605 27.1368 0.863224C26.584 0.310697 25.8344 0 25.0526 0ZM26.5261 10.0934C26.5261 10.4843 26.3709 10.8593 26.0946 11.1355C25.8181 11.4118 25.4434 11.5673 25.0525 11.5673H2.94738C2.5565 11.5673 2.18179 11.4118 1.90528 11.1355C1.62902 10.8593 1.4738 10.4843 1.4738 10.0934V2.94737C1.4738 2.55649 1.62902 2.18178 1.90528 1.90526C2.1818 1.629 2.55649 1.47378 2.94738 1.47378H25.0525C25.4434 1.47378 25.8181 1.629 26.0946 1.90526C26.3709 2.18178 26.5261 2.55647 26.5261 2.94737V10.0934ZM25.0526 14.9567H2.94742C2.16565 14.9567 1.41605 15.2672 0.86322 15.8199C0.310696 16.3727 0 17.1224 0 17.9039V25.0526C0 25.8343 0.310703 26.5839 0.86322 27.1368C1.416 27.6893 2.16565 28 2.94742 28H25.0526C25.8344 28 26.584 27.6893 27.1368 27.1368C27.6893 26.584 28 25.8343 28 25.0526V17.9065C28 17.1247 27.6893 16.3751 27.1368 15.8223C26.584 15.2695 25.8344 14.9591 25.0526 14.9591V14.9567ZM26.5261 25.0528C26.5261 25.4436 26.3709 25.8184 26.0946 26.0949C25.8181 26.3711 25.4434 26.5264 25.0525 26.5264H2.94738C2.5565 26.5264 2.18179 26.3711 1.90528 26.0949C1.62902 25.8183 1.4738 25.4437 1.4738 25.0528V17.9067C1.4738 17.5158 1.62902 17.1409 1.90528 16.8646C2.1818 16.5883 2.55649 16.4329 2.94738 16.4329H25.0525C25.4434 16.4329 25.8181 16.5883 26.0946 16.8646C26.3709 17.1409 26.5261 17.5158 26.5261 17.9067V25.0528Z" fill="currentColor"/>
+                </svg>
+                
+            </div>   
+          </button>    
+        </div>
+  
+  
+  
+      </div>
+
+<template x-if="treeView">
+  <div>
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-0 mx-auto mt-16">
+    {{ range first 7 (where .ctx.Site.RegularPages "Section" "blog") }} 
+
+        
+        <div class="group sm:w-3/4 md:w-80 md:h-52 bg-black text-white px-6 md:even:mt-80 md:second:mt-48 relative z-10 shadow-card-shadow mx-auto
+         md:last-of-type:left-1/2 md:last-of-type:top-1/2" 
+        x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false"
+        >
+          <div class="flex justify-between gap-10 items-center md:block md:gap-0" x-show="shown" x-transition.duration.500ms> 
+            <a href=" {{ .Permalink}}"> <img src="{{ .Params.heroImg }}"  loading="lazy" class="md:hidden w-64 object-cover" alt=""> </a>
+            
+            <div class="p-2">
+            <a href=" {{ .Permalink}}"><h3 class="sm:text-lg group-hover:text-transparent group-hover:bg-hover-card-heading group-hover:bg-clip-text font-semibold mt-5 line-clamp-2"> {{ .Title }} </h3></a>
+            <div class="flex justify-start gap-3 my-5">
+              <img src="{{ .Params.avatar }}" class="rounded-full object-contain" loading="lazy"/>
+            <p> {{ .Params.author }} </p>
+            </div>
+            {{ range .Params.categories }}
+            <a href="#">
+            <div class="hidden sm:inline-block mr-4">
+              <div class="flex justify-start items-center gap-2">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.29999 11.7002L0.299785 6.70001C-0.0999282 6.3003 -0.0999282 5.69968 0.299785 5.29999L5.29999 0.299785C5.6997 -0.0999282 6.30032 -0.0999282 6.70001 0.299785L11.7002 5.29999C12.0999 5.6997 12.0999 6.30032 11.7002 6.70001L6.70001 11.7002C6.3003 12.0999 5.70038 12.0999 5.29999 11.7002ZM2.40023 5.99962L6.00038 9.59977L9.60052 5.99962L6.00038 2.39948L2.40023 5.99962Z" fill="#27AAE1"/>
+            </svg>           
+            <span class=" text-2xs text-sm pb-1">{{.}}</span></div>    
+          </div>
+            </a>
+            {{end}}
+          </div>
+          </div>
+        </div>
+
+    {{end}}
+  </div>
+  <div class="w-full flex justify-center mt-24">
+    <a href="#" class="mx-auto bg-light-blue text-white rounded-3xl px-5 py-2 my-20">See all</a>
+    </div>
+  
+  </div>
+</template>
+
+<template x-if="!treeView">
+  <div>
+  <div class="mx-auto mt-16 ml-30 relative">
+    {{ range first 6 (where .ctx.Site.RegularPages "Section" "blog") }} 
+
+    <div class="group bg-black text-white relative z-10 shadow-card-shadow max-w-2xl my-12 min-h-[240px] rounded-lg
+        last-of-type:hidden lg:last-of-type:block last-of-type:absolute last-of-type:right-0 last-of-type:top-0 last-of-type:m-0 last-of-type:max-w-[300px]
+    " 
+    x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false"
+    >
+      <div class="grid grid-cols-2 gap-6 group-last:flex group-last:flex-col" x-show="shown" x-transition.duration.500ms> 
+        <div class="flex justify-center items-center">
+        <a href=" {{ .Permalink}}"> <img src="{{ .Params.heroImg }}"  loading="lazy" class="object-cover m-auto h-full rounded-l-lg  group-last:rounded-l-none group-last:rounded-t-lg " alt=""> </a>
+        </div>
+        <div class="p-3">
+          <span class="text-xs text-left text-gray"> {{ .Date.Format "01.01.1996" }}</span>
+        <a href=" {{ .Permalink}}"><h3 class="sm:text-lg group-hover:text-transparent group-hover:bg-hover-card-heading group-hover:bg-clip-text font-semibold mt-5"> {{ .Title }} </h3></a>
+        <div class="flex justify-start gap-3 my-5">
+          <img src="{{ .Params.avatar }}" class="rounded-full" loading="lazy"/>
+        <p> {{ .Params.author }} </p>
+        </div>
+        {{ range .Params.categories }}
+        <a href="#">
+        <div class="inline-block mr-4">
+          <div class="flex justify-start items-center gap-2">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.29999 11.7002L0.299785 6.70001C-0.0999282 6.3003 -0.0999282 5.69968 0.299785 5.29999L5.29999 0.299785C5.6997 -0.0999282 6.30032 -0.0999282 6.70001 0.299785L11.7002 5.29999C12.0999 5.6997 12.0999 6.30032 11.7002 6.70001L6.70001 11.7002C6.3003 12.0999 5.70038 12.0999 5.29999 11.7002ZM2.40023 5.99962L6.00038 9.59977L9.60052 5.99962L6.00038 2.39948L2.40023 5.99962Z" fill="#27AAE1"/>
+        </svg>           
+        <span class=" text-xs sm:text-sm pb-1">{{.}}</span></div>    
+      </div>
+        </a>
+        {{end}}
+      </div>
+      </div>
+    </div>
+
+
+    {{end}}
+
+
+  </div>
+  <div class="w-full flex justify-center mt-24">
+    <a href="#" class="mx-auto bg-light-blue text-white rounded-3xl px-5 py-2 my-20">See all</a>
+    </div>
+  
+  </div>
+</template>
+
+
+
+</div>
+
+</section>
