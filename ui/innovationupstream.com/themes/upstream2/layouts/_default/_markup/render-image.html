@@ -1,0 +1,47 @@
+{{ $baseURL := site.Params.cloudinary_base_url }}
+
+{{ $sm := "f_auto,q_80,w_376" }}
+{{ $ml := "f_auto,q_80,w_640" }}
+{{ $lg := "f_auto,q_80,w_1024" }}
+{{ $xl := "f_auto,q_80,w_1400" }}
+{{ $transformation := "f_auto,q_80" }}
+{{ $url := urls.Parse .Destination }}
+{{ $file := path.Base ($url.Path) }}
+{{ $imageDir := path.Split (path.Dir ($url.Path)) }}
+{{ $host := $url.Host }}
+<figure>
+  <picture>
+     {{ if $host = "res.cloudinary.com" }}
+     <source
+     media="(max-width: 376px)"
+     srcset="
+     {{ $baseURL }}{{ $sm }}/{{ $imageDir.File }}/{{ $file }}
+     "
+     />
+     <source
+       media="(max-width: 640px)"
+       srcset="
+         {{ $baseURL }}{{ $ml }}/{{ $imageDir.File }}/{{ $file }}
+       "
+     />
+     <source
+       media="(max-width: 1024px)"
+       srcset="
+         {{ $baseURL }}{{ $lg }}/{{ $imageDir.File }}/{{ $file }}
+       "
+     />
+     <source
+       media="(max-width: 1600px)"
+       srcset="
+         {{ $baseURL }}{{ $transformation }}{{ $xl }}/{{ $imageDir.File }}/{{ $file }}
+       "
+     />
+     {{end}}
+     <img src="{{ .Destination | safeURL }}" width="100%" height="100%" loading="lazy" class="mx-auto"  />
+   </picture>
+   {{ with .Title }}
+     <figcaption>
+       {{ . }}
+     </figcaption>
+   {{ end }}
+ </figure>

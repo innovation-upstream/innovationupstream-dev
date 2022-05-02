@@ -1,0 +1,36 @@
+<section class="inform-section relative py-10 lg:pt-40 lg:pb-32">
+  <div class="container w-full lg:h-full max-w-[1172px] px-4 mx-auto">
+
+    {{ if .header }}
+    <h1 class="uppercase text-3xl text-black font-bold py-10 mt-20 max-w-1/2"> {{ .header.title }}</h1>
+    {{ end }}
+
+    <div class="inform-wrap gap-8 columns-1 md:columns-2 lg:columns-3">
+
+      {{ range first 3 (where .ctx.Site.RegularPages "Section" "blog" ) }}
+
+      <a href="{{ .Permalink }}">
+      <div class="inform w-full">
+        <div class="inform-wrap mb-8 relative rounded-[8px] overflow-hidden">
+          <div class="inform-img">
+            <img class="w-full block" src=" {{ .Params.heroImg }}" alt="">
+          </div>
+          <div class="inform-descr absolute left-0 bottom-0 py-10 px-6 bg-blur-bg backdrop-blur">
+            <h3 class="text-white text-[22px] font-semibold">
+              {{/*  Lorem ipsum dolor sit amet, consectetur adipiscing elit  */}}
+              {{.Params.title}}
+              
+            </h3>
+          </div>
+        </div>
+      </div>
+    </a>
+
+      {{ end }}
+
+
+
+
+    </div>
+  </div>
+</section>

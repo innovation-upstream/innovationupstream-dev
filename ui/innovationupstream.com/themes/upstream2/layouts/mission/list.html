@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="wrapper relative overflow-hidden">
+    {{ partial "partials/header.html" (dict "ctx" .) }}
+
+    <main class="main">
+        {{ partial "partials/mission/intro-section" (dict "ctx" .Site.Params.missionHero) }}
+        {{ partial "partials/mission/what-section.html"}}
+        {{ partial "partials/how-we-build/articles-section.html" (dict "ctx" . )}}
+        {{ partial "partials/contact-section" (dict "ctx" .Site.Params.contactUs)}}
+    </main>
+    {{ partial "partials/footer" (dict "ctx" .)}}
+</div>
+{{ end }}

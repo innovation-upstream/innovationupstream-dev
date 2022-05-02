@@ -1,0 +1,56 @@
+<section class="tools-section bg-cover bg-center bg-no-repeat bg-tools-section relative py-10 lg:py-[100px]">
+  <div class="tools-bg hidden xl:flex absolute z-1 top-0 left-[133px] w-full h-full bg-tools-section-decor bg-no-repeat bg-top"></div>
+  <div class="container relative z-2 w-full max-w-[1172px] px-4 mx-auto">
+    <div class="max-w-[300px] text-gray mb-[65px]">
+      <h3
+        class="bg-clip-text bg-text-gradient text-transparent uppercase font-semibold mb-4"
+      >
+        {{ .ctx.title }}
+      </h3>
+      <h2 class="uppercase font-bold text-2xl lg:text-4xl mb-6 text-white">
+        {{ .ctx.subtitle }}
+      </h2>
+      <p class="leading-7">
+        {{ .ctx.description }}
+      </p>
+    </div>
+    <div class="tools-items xl:pl-[276px]">
+      <div class="tolls-row xl:flex xl:flex-row xl:justify-between xl:mb-[294px]">
+        <div class="tools-item mb-4 xl:max-w-[202px] xl:text-right ">
+          <h3 class="bg-clip-text bg-text-gradient text-transparent text-xl lg:text-2xl font-semibold mb-2">
+            {{ .ctx.tool1 }}
+          </h3>
+          <p class="text-white text-sm font-light leading-6">
+            {{ .ctx.tool1info }}
+          </p>
+        </div>
+        <div class="tools-item mb-4 xl:max-w-[202px] text-left xl:pt-[105px] relative xl:right-1">
+          <h3 class="bg-clip-text bg-text-gradient text-transparent text-xl lg:text-2xl font-semibold mb-2">
+            {{ .ctx.tool2 }}
+          </h3>
+          <p class="text-white text-sm font-light leading-6">
+            {{ .ctx.tool2info }}
+          </p>
+        </div>
+      </div>
+      <div class="tolls-row xl:flex xl:flex-row xl:justify-between">
+        <div class="tools-item mb-4 xl:max-w-[202px] xl:text-right relative xl:bottom-4">
+          <h3 class="bg-clip-text bg-text-gradient text-transparent text-xl lg:text-2xl font-semibold mb-2">
+            {{ .ctx.tool3 }}
+          </h3>
+          <p class="text-white text-sm font-light leading-6">
+            {{ .ctx.tool3info }}
+          </p>
+        </div>
+        <div class="tools-item mb-4 xl:max-w-[202px] text-left xl:pt-[105px] relative xl:right-1">
+          <h3 class="bg-clip-text bg-text-gradient text-transparent text-xl lg:text-2xl font-semibold mb-2">
+            {{ .ctx.tool4 }}
+          </h3>
+          <p class="text-white text-sm font-light leading-6">
+            {{ .ctx.tool4info }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

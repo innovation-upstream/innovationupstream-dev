@@ -1,0 +1,108 @@
+
+{{ if and (eq .ctx.Section "blog") (.ctx.IsPage) }}
+
+<header class="header absolute z-10 top-0 left-0 right-0 bg-black h-24" x-data="{ open: false }">
+    <div class="w-full py-8 flex items-center justify-between h-24 container mx-auto px-4">
+      <a href="/" class="logo">
+        <img src="{{ .ctx.Site.Params.brand.logoHeader }}" loading='lazy' alt="Logo">
+      </a>
+  
+  
+  
+     {{/*  mobile menu, hide/show using variable 'open'   */}}
+      <nav class="nav fixed top-0 right-0 bg-black z-10 w-full h-screen pt-8 js-nav" x-show="open"
+      style="display: none"
+      >
+        <ul class="flex flex-col items-center md:flex-row">
+
+
+         {{ range .ctx.Site.Menus.main }}
+
+          <li class="mt-4 md:mt-0 md:ml-8 lg:ml-14 first-of-type:ml-0">
+            <a class="text-sm text-white" href="{{ .URL }}">{{ .Name}}</a>
+          </li>
+
+          {{ end}}
+
+
+        </ul>
+      </nav>
+  
+      {{/*  mobile menu end  */}}
+  
+      <nav class=" hidden nav fixed top-0 right-0 bg-black z-10 w-full pt-8 md:flex md:relative md:top-auto md:right-auto md:bg-transparent md:w-auto md:py-0 js-nav h-40">
+        <ul class="flex flex-col items-center md:flex-row">
+
+            
+
+          {{ range .ctx.Site.Menus.main }}
+
+          <li class="mt-4 md:mt-0 md:ml-8 lg:ml-14 first-of-type:ml-0">
+            <a class="text-sm text-white" href="{{ .URL }}">{{ .Name}}</a>
+          </li>
+
+          {{ end}}
+        </ul>
+      </nav> 
+  
+      <button class="burger flex flex-col relative z-20 md:hidden js-burger" @click="open=!open" @click.away="open=false">
+        <span class="w-6 h-[2px] bg-white mb-[5px]"></span>
+        <span class="w-6 h-[2px] bg-white "></span>
+        <span class="w-6 h-[2px] bg-white mt-[5px]"></span>
+      </button>
+    </div>
+  </header>
+
+  {{ else }}
+
+
+<header class="header absolute z-20 top-5 left-0 right-0" x-data="{ open: false }">
+  <div class="container w-full max-w-[1172px] px-4 mx-auto flex items-center justify-between">
+    <a href="/" class="logo">
+      <img src="https://res.cloudinary.com/innovation-upstream/image/upload/v1648873286/InUp/logo_p1vmep.svg" alt="">
+    </a>
+
+
+
+   {{/*  mobile menu, hide/show using variable 'open'   */}}
+    <nav class="nav fixed top-0 right-0 bg-black z-10 w-full h-screen pt-8 md:flex md:relative md:top-auto md:right-auto md:bg-transparent md:w-auto md:h-auto md:pt-0 js-nav" x-show="open"
+    style="display: none"
+    >
+      <ul class="flex flex-col items-center md:flex-row">
+        {{ range .ctx.Site.Menus.main }}
+
+        <li class="mt-4 md:mt-0 md:ml-8 lg:ml-14 first-of-type:ml-0">
+          <a class="text-sm text-white" href="{{ .URL }}">{{ .Name}}</a>
+        </li>
+
+        {{ end}}
+      </ul>
+    </nav>
+
+    {{/*  mobile menu end  */}}
+
+    <nav class=" hidden nav fixed top-0 right-0 bg-black z-10 w-full h-screen pt-8 md:flex md:relative md:top-auto md:right-auto md:bg-transparent md:w-auto md:h-auto md:pt-0 js-nav">
+      <ul class="flex flex-col items-center md:flex-row">
+
+        {{ range .ctx.Site.Menus.main }}
+
+        <li class="mt-4 md:mt-0 md:ml-8 lg:ml-14 first-of-type:ml-0">
+          <a class="text-sm text-white" href="{{ .URL }}">{{ .Name}}</a>
+        </li>
+
+        {{ end}}
+
+
+
+      </ul>
+    </nav>
+
+    <button class="burger flex flex-col relative z-20 md:hidden js-burger" @click="open=!open" @click.away="open=false">
+      <span class="w-6 h-[2px] bg-white mb-[5px]"></span>
+      <span class="w-6 h-[2px] bg-white "></span>
+      <span class="w-6 h-[2px] bg-white mt-[5px]"></span>
+    </button>
+  </div>
+</header>
+
+{{ end }}

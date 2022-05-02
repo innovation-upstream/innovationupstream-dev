@@ -1,0 +1,159 @@
+
+[[footer]]
+name = "General"
+url = "/general"
+identifier = ''
+pre = ''
+title = ''
+weight = 1
+
+
+[[footer]]
+name = "About us"
+url = "/mission"
+identifier = ''
+pre = ''
+title = ''
+weight = 2
+parent = "General"
+
+# [[footer]]
+# name = "Our Benefits"
+# url = "/our-benefits"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 4
+# parent = "General"
+
+
+
+# [[footer]]
+# name = "Our tools"
+# url = "/our-tools"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 6
+# parent = "General"
+
+# [[footer]]
+# name = "Blog"
+# url = "/blog"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 8
+# parent = "General"
+
+
+
+# [[footer]]
+# name = "Culture"
+# url = "/culture"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 3
+# parent = "General"
+
+[[footer]]
+name = "How we build"
+url = "/how-we-build"
+identifier = ''
+pre = ''
+title = ''
+weight = 5
+parent = "General"
+
+# [[footer]]
+# name = "Jobs"
+# url = "/jobs"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 7
+# parent = "General"
+
+[[docs]]
+name = "Privacy Policy"
+url = "#"
+identifier = ''
+pre = ''
+title = ''
+weight = 1
+
+[[docs]]
+name = "Terms and Conditions"
+url = "#"
+identifier = ''
+pre = ''
+title = ''
+weight = 2
+
+[[docs]]
+name = "Help"
+url = "#"
+identifier = ''
+pre = ''
+title = ''
+weight = 3
+
+
+[[main]]
+name = "About us"
+url = "/mission"
+identifier = ''
+pre = ''
+title = ''
+weight = 1
+
+[[main]]
+name = "How we build"
+url = "/how-we-build"
+identifier = ''
+pre = ''
+title = ''
+weight = 10
+
+# [[main]]
+# name = "Our benefits"
+# url = "/our-benefits"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 2
+
+
+# [[main]]
+# name = "Our tools"
+# url = "/our-tools"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 3
+
+
+# [[main]]
+# name = "Blog"
+# url = "/blog"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 4
+
+# [[main]]
+# name = "Jobs"
+# url = "/jobs"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 5
+
+# [[main]]
+# name = "Contact us"
+# url = "/contact-us"
+# identifier = ''
+# pre = ''
+# title = ''
+# weight = 6

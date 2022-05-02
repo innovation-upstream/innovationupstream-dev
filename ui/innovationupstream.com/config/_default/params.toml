@@ -1,0 +1,117 @@
+cloudinary_base_url = 'https://res.cloudinary.com/innovation-upstream/'
+cloudinary_name = 'InUp'
+
+[brand]
+logoHeader = 'https://res.cloudinary.com/innovation-upstream/image/upload/v1648873286/InUp/logo_p1vmep.svg'
+logoFooter = 'https://res.cloudinary.com/innovation-upstream/image/upload/f_auto,c_scale,h_75,q_80/v1649877325/InUp/LogoFooter_mwvzmz.png'
+copyright = 'All rights reserved 2021. Innovation upstream.'
+
+[intro]
+title = 'Lorem ipsum sit amet, consectetur sedemod.'
+subtitle = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+button = 'Get started'
+
+[[intro.number]]
+quantity  = '45'
+info = 'Lorem ipsum'
+
+[[intro.number]]
+quantity = '276'
+info = 'Lorem ipsum'
+
+[[intro.number]]
+quantity  = '83'
+info = 'Lorem ipsum'
+
+[about]
+subtitle = 'About us'
+title = 'Lorem ipsum sit amet, consectetur sed.'
+description1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+description2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+[about.benefits]
+title = 'Our'
+subtitle = 'benefits'
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.'
+[[about.features]]
+title = 'first'
+subtitle = 'feature'
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+[[about.features]]
+title = 'second'
+subtitle = 'feature'
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+[[about.features]]
+title = 'third'
+subtitle = 'feature'
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+
+
+
+[tools]
+title = 'our tools'
+subtitle = 'Lorem ipsum sit amet, consectetur'
+description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+tool1 = 'Tool 1'
+tool1info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
+tool2 = 'Tool 2'
+tool2info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
+tool3 = 'Tool 3'
+tool3info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
+tool4 = 'Tool 4'
+tool4info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
+
+
+
+[contactUs]
+title = "Get in touch with us"
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+placeholder = "Enter your email"
+button = "Subscribe"
+
+[footerContacts]
+title="Get in touch"
+mail = "innovationstream@gmail.com"
+phone = "+1 097 467 21 12"
+twitterURL = 'https://www.twitter.com'
+instagramURL = 'https://www.instagram.com'
+facebookURL = 'https://www.facebook.com'
+
+
+##blog-list
+[blogIntro]
+title = 'Lorem ipsum sit amet, consectetur sedemod.'
+subtitle = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur'
+button = 'Become a writer'
+
+[blogArticles]
+title = 'Articles'
+[[blogArticles.filters]]
+name = 'All'
+[[blogArticles.filters]]
+name = 'New'
+[[blogArticles.filters]]
+name = 'Lorem ipsum'
+[[blogArticles.filters]]
+name = 'Lorem ipsum'
+[[blogArticles.filters]]
+name = 'Lorem ipsum'
+
+
+
+
+##blog-single
+[youMayAlsoLike]
+title = "You may also like"
+
+##how-we-build
+[howWeBuildArticles]
+title = "POPULAR ARTICLES"
+
+##our-mission
+[missionHero]
+title = "Our mission"
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+[missionArticles]
+title = "CULTURE OF INNOVATION AND ITERATION"
